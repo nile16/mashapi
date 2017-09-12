@@ -1,0 +1,28 @@
+{
+  "name": "mashapi",
+  "version": "1.0.0",
+  "description": "Ett API som kombinerar väderprognos från SMHI med aktuell temperatur för Ronneby",
+  "main": "mashapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nile16/mashapi.git"
+  },
+  "keywords": [
+    "mash",
+    "SMHI",
+    "Ronneby"
+  ],
+  "author": "nile16",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nile16/mashapi/issues"
+  },
+  "homepage": "https://github.com/nile16/mashapi#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "http": "0.0.0"
+  }
+}
