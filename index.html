@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+</head>
+
+<body>
+</body>
+
+<script>
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       var data = xhttp.response;
+	   console.log(data);
+	   console.log("Updated:",data.time);
+	   console.log("Current temp:",data.temp.Ronneby);
+	   for (i=0;i<24;i++) console.log(data.forecast[i].validTime,data.forecast[i].parameters[0].values[0]);
+    }
+};
+xhttp.open("GET", "http://nile16.nu:5984/forecast/1", true);
+xhttp.responseType = 'json';
+xhttp.send();
+
+</script>
