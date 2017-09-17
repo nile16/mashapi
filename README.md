@@ -11,11 +11,12 @@ temp.js:
 En modul som läser in temperaturen från tempAPIs API.
 
 forecast.js:  
-En modulen som läser in prognosen från SMHIs API.
+En modul som läser in prognosen från SMHIs API.
 
 mashAPI.js:  
-En server som Data kan enkelt hämtas med  
+Hämtar prognos och temperatur varje halvtimma med temp.js och forecast.js. Sparar datat i en CouchDB databas.  
+En server som vid anrop skickar prognos och temperatur från databasen.  
 GET http://nile16.nu:1255/
 
 index.html:  
-En webbsida som läser in från mashAPI.js och presenterar en graf och aktuell temperatur. Kan ses på http://nile16.nu/mash
+En webbsida som hämtar prognos och temperatur från mashAPI.js och presenterar en graf och aktuell temperatur. Kan ses på http://ile16.nu/mash
