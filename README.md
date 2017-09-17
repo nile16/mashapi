@@ -19,4 +19,4 @@ En server som vid anrop skickar prognos och temperatur från databasen.
 GET http://nile16.nu:1255/
 
 index.html:  
-En webbsida som hämtar prognos och temperatur från mashAPI.js och presenterar en graf och aktuell temperatur. Kan ses på http://ile16.nu/mash
+En webbsida som hämtar prognos och temperatur från mashAPI.js och presenterar en graf och aktuell temperatur. Kan ses på http://nile16.nu/mash/
