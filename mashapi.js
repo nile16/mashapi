@@ -21,8 +21,31 @@ setInterval( function(){
 			});
 		});
 	});
-},3600000);
+},1800000);
 
 
+const server = http.createServer((req, res) => {
+
+	res.setHeader('Access-Control-Allow-Origin',   '*');
+	res.setHeader('Access-Control-Request-Method', '*');
+	res.setHeader('Access-Control-Allow-Methods',  '*');
+	res.setHeader('Access-Control-Allow-Headers',  '*');
+
+	res.setHeader('Content-Type', 'application/json');
+
+	switch(req.method){
+
+		case 'GET':
+			request({ method: 'GET', uri:'http://192.168.1.200:5984/forecast/1'}, function (error, response, body) {
+				res.end(body);
+			});
+			break;
+
+		default:
+			res.end(JSON.stringify({error:'Method not supported'}));
+			break;
+	}		
+			
+}).listen(1255);
 
 
